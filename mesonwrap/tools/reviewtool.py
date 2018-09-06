@@ -20,9 +20,9 @@ import re
 import shutil
 import subprocess
 import sys
-import tempfile
 import urllib.request
 
+from mesonwrap import tempfile
 from mesonwrap import upstream
 from mesonwrap.tools import environment
 
