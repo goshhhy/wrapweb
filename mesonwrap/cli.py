@@ -4,6 +4,7 @@ import sys
 import typing
 
 from wrapweb import APP
+from mesonwrap import release
 from mesonwrap import wrapcreator
 from mesonwrap import wrapupdater
 from mesonwrap.tools import repoinit, reviewtool, dbtool
@@ -86,3 +87,7 @@ class Command:
     def command_import_from_hosted(self):
         """Import projects from wrapdb into github"""
         import_from_hosted.main(*self.args())
+
+    def command_release(self):
+        """Release project to github"""
+        release.main(*self.args())
